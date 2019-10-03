@@ -12,21 +12,22 @@ namespace StudentCarGame
     public class GameObject
 
     {
-        /*
-         A property in C# is a way to set getters and setters for private
-         attributes
-         */
+        
         //Enabling or disabling a game object
-        private bool Enabled { get; set; }
+        private bool enabled;
         //identify game object
+        //auto-implemented properties
         public String Name { get; set; }
         /*identify a group of game objects, like trafic cars, to group all
         trafic vehicles like trucks, buses, milkvan or sedan
         */
         public String Tag { get; set; }
 
+
         /*
-        //Normal way to use getters and setters in C#
+         A property in C# is a way to set getters and setters for private
+         attributes
+         */
         public bool Enabled
         {
             get
@@ -36,10 +37,24 @@ namespace StudentCarGame
             set
             {
                 enabled = value;
+                if (enabled)
+                    OnEnabled();
+                else
+                    OnDisabled();
             }
+        }
+
+        /*
+         This virtual method to be implemented in child classes with overide*/
+        public virtual void OnEnabled()
+        {
 
         }
-        */
+        public virtual void OnDisabled()
+        {
+
+        }
+
 
         /*
          This method is declared as virtual, and must therefore be public.
@@ -66,6 +81,7 @@ namespace StudentCarGame
             GameObject go = new GameObject();
             go.Enabled = true; //Setter method
             bool e = go.Enabled; //Getter method
+            Console.WriteLine($"status of: {e}");
         }
     }
 }

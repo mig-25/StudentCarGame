@@ -56,11 +56,11 @@ namespace StudentCarGame
 
             Console.WriteLine("[Player] Health:{0}", Health);
 
-            GameManager.Instance.AddPlayerCash(cash);
-            if (Health <= 0)
-            {
-                IsAlive = false;
-            }
+            //GameManager.Instance.AddPlayerCash(cash);
+            //if (Health <= 0)
+            //{
+            //    IsAlive = false;
+            //}
         }
     }
 }

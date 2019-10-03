@@ -21,5 +21,10 @@ namespace StudentCarGame
         {
             base.OnCollision(other);
         }
+
+        public override void OnEnabled()
+        {
+            count = 0;
+        }
     }
 }

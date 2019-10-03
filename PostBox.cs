@@ -14,5 +14,10 @@ namespace StudentCarGame
         {
 
         }
+
+        public override void OnEnabled()
+        {
+            count = 0;
+        }
     }
 }

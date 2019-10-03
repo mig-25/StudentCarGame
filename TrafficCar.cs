@@ -37,6 +37,9 @@ namespace StudentCarGame
         public static TrafficCar Create()
         {
             Random r = new Random();
+            TrafficCar traficCarObj = null;
+
+            return traficCarObj;
         }
     }
 }

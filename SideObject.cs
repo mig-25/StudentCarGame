@@ -19,6 +19,8 @@ namespace StudentCarGame
         {
             Random r = new Random();
             SideObject sideObj = null;
+
+            return sideObj;
         }
 
     }
